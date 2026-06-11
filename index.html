@@ -15,22 +15,23 @@
     
     <style>
         :root {
-            --primary-blue: #0F2C59;
+            /* 調整為與官方 Logo 一致的高級優雅深紫色 */
+            --primary-blue: #5C2D91; 
             --accent-gold: #C5A880;
             --accent-gold-hover: #b09168;
-            --dark-navy: #08162d;
-            --light-bg: #f8fafc;
-            --card-shadow: 0 15px 35px rgba(15, 44, 89, 0.06);
+            --dark-navy: #1C0A35; /* 奢華深紫黑 */
+            --light-bg: #fdfbfe;
+            --card-shadow: 0 15px 35px rgba(92, 45, 145, 0.06);
             --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
             
-            /* 固定為明亮高質感色系 */
+            /* 明亮高質感、微紫光澤的色彩基調 */
             --bg-color: #ffffff;
-            --sec-bg-color: #f4f7fa;
-            --text-color: #1e293b;
-            --text-muted: #64748b;
-            --border-color: #e2e8f0;
+            --sec-bg-color: #F5F0FC; /* 優雅的薰衣草淺紫灰底 */
+            --text-color: #1e1233;
+            --text-muted: #72628A;
+            --border-color: #EDE4F7;
             --card-bg: #ffffff;
-            --navbar-bg: rgba(255, 255, 255, 0.95);
+            --navbar-bg: rgba(255, 255, 255, 0.96);
         }
 
         body {
@@ -80,7 +81,7 @@
         }
         .hover-lift:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(15, 44, 89, 0.12) !important;
+            box-shadow: 0 20px 40px rgba(92, 45, 145, 0.12) !important;
         }
 
         /* 導航欄 */
@@ -99,7 +100,8 @@
             transition: var(--transition-smooth);
         }
         .nav-link:hover, .nav-link.active {
-            color: var(--accent-gold) !important;
+            color: var(--primary-blue) !important;
+            font-weight: 600;
         }
 
         /* 漸變文本 */
@@ -146,7 +148,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(180deg, rgba(8, 22, 45, 0.85) 0%, rgba(8, 22, 45, 0.5) 50%, rgba(8, 22, 45, 0.9) 100%);
+            background: linear-gradient(180deg, rgba(28, 10, 53, 0.88) 0%, rgba(28, 10, 53, 0.5) 50%, rgba(28, 10, 53, 0.92) 100%);
             z-index: 2;
         }
 
@@ -168,16 +170,16 @@
         }
         .letter-card:hover {
             border-color: var(--accent-gold);
-            background: linear-gradient(145deg, var(--card-bg) 0%, rgba(197, 168, 128, 0.05) 100%);
+            background: linear-gradient(145deg, var(--card-bg) 0%, rgba(92, 45, 145, 0.04) 100%);
         }
         .large-letter {
             font-size: 4.5rem;
             font-weight: 900;
-            color: var(--accent-gold);
+            color: var(--primary-blue);
             line-height: 1;
             margin-bottom: 10px;
             font-family: 'Inter', sans-serif;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+            text-shadow: 2px 2px 4px rgba(92, 45, 145, 0.1);
         }
 
         /* 協會目標時間軸/網格 */
@@ -198,7 +200,7 @@
             left: 0;
             width: 4px;
             height: 100%;
-            background-color: var(--accent-gold);
+            background-color: var(--primary-blue);
             transition: var(--transition-smooth);
         }
         .objective-card:hover::before {
@@ -207,8 +209,8 @@
         .objective-num {
             font-size: 1.2rem;
             font-weight: 700;
-            color: var(--accent-gold);
-            background: rgba(197, 168, 128, 0.1);
+            color: var(--primary-blue);
+            background: rgba(92, 45, 145, 0.08);
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -220,7 +222,7 @@
 
         /* 金融風按鈕 */
         .btn-gold {
-            background-color: var(--accent-gold);
+            background-color: var(--primary-blue);
             color: #ffffff !important;
             border: none;
             padding: 12px 30px;
@@ -229,14 +231,14 @@
             transition: var(--transition-smooth);
         }
         .btn-gold:hover {
-            background-color: var(--accent-gold-hover);
-            box-shadow: 0 8px 20px rgba(197, 168, 128, 0.3);
+            background-color: var(--dark-navy);
+            box-shadow: 0 8px 20px rgba(92, 45, 145, 0.25);
             transform: translateY(-2px);
         }
 
         .btn-outline-gold {
-            border: 2px solid var(--accent-gold);
-            color: var(--accent-gold);
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
             background: transparent;
             padding: 10px 28px;
             border-radius: 30px;
@@ -244,7 +246,7 @@
             transition: var(--transition-smooth);
         }
         .btn-outline-gold:hover {
-            background-color: var(--accent-gold);
+            background-color: var(--primary-blue);
             color: #ffffff !important;
         }
 
@@ -259,9 +261,9 @@
             transition: var(--transition-smooth);
         }
         .gallery-filter .btn.active {
-            background: var(--accent-gold);
+            background: var(--primary-blue);
             color: #ffffff;
-            box-shadow: 0 4px 12px rgba(197, 168, 128, 0.2);
+            box-shadow: 0 4px 12px rgba(92, 45, 145, 0.2);
         }
 
         .gallery-item {
@@ -285,7 +287,7 @@
             transition: var(--transition-smooth);
         }
         .pub-card:hover {
-            border-color: var(--accent-gold);
+            border-color: var(--primary-blue);
         }
 
         /* 理事會卡片 */
@@ -301,7 +303,7 @@
             font-size: 2rem;
             font-weight: bold;
             margin: 0 auto 20px auto;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 16px rgba(92, 45, 145, 0.15);
         }
 
         /* 麵包屑導航 (分頁感必備) */
@@ -316,7 +318,7 @@
         .form-section-title {
             font-size: 1.15rem;
             color: var(--primary-blue);
-            border-left: 4px solid var(--accent-gold);
+            border-left: 4px solid var(--primary-blue);
             padding-left: 12px;
             margin-bottom: 20px;
             margin-top: 10px;
@@ -333,7 +335,12 @@
         }
         
         .form-card:hover {
-            border-color: rgba(197, 168, 128, 0.4);
+            border-color: rgba(92, 45, 145, 0.3);
+        }
+        
+        /* 文字主顏色匹配 */
+        .text-primary-blue {
+            color: var(--primary-blue) !important;
         }
     </style>
 </head>
@@ -348,7 +355,7 @@
             <a class="navbar-brand d-flex align-items-center" href="#" onclick="switchPage('home', event)">
                 <i class="bi bi-award-fill text-gold-gradient fs-3 me-2"></i>
                 <span class="fs-5 fw-bold text-primary-blue d-flex flex-column" style="line-height: 1.1;">
-                    <span style="color: var(--accent-gold); letter-spacing: 1px;">智能會計師協會</span>
+                    <span style="color: var(--primary-blue); letter-spacing: 1px;">智能會計師協會</span>
                     <span class="small text-muted" style="font-size: 0.65rem; font-weight: normal;">Smart Accountants Association</span>
                 </span>
             </a>
@@ -364,7 +371,7 @@
                     <li class="nav-item"><a class="nav-link px-3" data-page="events" onclick="switchPage('events', event)">活動花絮</a></li>
                     <li class="nav-item"><a class="nav-link px-3" data-page="publications" onclick="switchPage('publications', event)">專業刊物</a></li>
                     <li class="nav-item ms-lg-3">
-                        <a href="#" class="btn btn-gold btn-sm rounded-pill px-4" onclick="switchPage('join', event)">申請入會</a>
+                        <a href="#" class="btn btn-gold btn-sm rounded-pill px-4" onclick="switchPage('join', event)" style="background-color: var(--primary-blue); border-color: var(--primary-blue);">申請入會</a>
                     </li>
                 </ul>
             </div>
@@ -428,7 +435,7 @@
             <div class="row align-items-center my-5 py-4">
                 <div class="col-lg-6 text-start">
                     <span class="text-gold-gradient fw-bold text-uppercase tracking-wider">Welcoming Message</span>
-                    <h2 class="fw-bold fs-1 mt-2 mb-4">搭建交流平台，匯聚菁英能量</h2>
+                    <h2 class="fw-bold fs-1 mt-2 mb-4" style="color: var(--primary-blue);">搭建交流平台，匯聚菁英能量</h2>
                     <p class="text-muted leading-loose">
                         歡迎來到智能會計師協會（SAA）。我們致力於為擁有豐富經驗及專業知識的資深會計師、金融管理者，提供一個跨越地域、融合學術與生活樂趣的專屬舞台。
                     </p>
@@ -480,7 +487,7 @@
             <div class="row mb-5 text-start">
                 <div class="col-lg-8">
                     <span class="text-gold-gradient fw-bold">Core Concept of SAA</span>
-                    <h2 class="fw-bold display-5 mt-2 mb-3">SMART 代表什麼？</h2>
+                    <h2 class="fw-bold display-5 mt-2 mb-3" style="color: var(--primary-blue);">SMART 代表什麼？</h2>
                     <p class="text-muted lead">「SMART」不僅是智能的代名詞，更是我們所凝聚的資深專業會計師在職業與個人成長中所展示的五大核心特質：</p>
                 </div>
             </div>
@@ -507,7 +514,7 @@
                     <div class="letter-card">
                         <div class="large-letter">A</div>
                         <h4 class="fw-bold mb-2">Agile (敏捷靈活)</h4>
-                        <p class="text-muted mb-0">面對人工智慧、數字化轉型及法規重塑，我們倡導敏捷應變，積極學習最新技術與理念，引領行業隨時代潮流共同進化。</p>
+                        <p class="text-muted mb-0">面對人工智慧、數字化轉型及法規重塑，我們倡導敏捷應變，積極學習最新技術與理念，引引領行業隨時代潮流共同進化。</p>
                     </div>
                 </div>
                 <!-- R -->
@@ -529,7 +536,7 @@
             </div>
 
             <!-- 傳承理念 -->
-            <div class="p-5 rounded-4 bg-light-subtle text-start my-5 border">
+            <div class="p-5 rounded-4 bg-light-subtle text-start my-5 border" style="border-color: var(--border-color) !important;">
                 <h3 class="fw-bold text-primary-blue mb-3">我們的培育與傳承使命</h3>
                 <p class="text-muted">
                     智能會計師協會不只是高級合夥人或上市企業CFO的聯誼所。我們積極鼓勵每一位資深會計專才傾囊相授，將畢生累積的管理知識、實戰精髓和決策哲學，傳承給新一代社會會計尖端人才。透過與不同專業協會的跨界交流、大專院校的專題對話，孕育和孵化出能勇擔重任的明日之星。
@@ -556,7 +563,7 @@
             <div class="row text-start mb-5">
                 <div class="col-lg-8">
                     <span class="text-gold-gradient fw-bold">SAA Five Core Goals</span>
-                    <h2 class="fw-bold display-5 mt-2 mb-3">SAA 目標與願景定位</h2>
+                    <h2 class="fw-bold display-5 mt-2 mb-3" style="color: var(--primary-blue);">SAA 目標與願景定位</h2>
                     <p class="text-muted">智能會計師協會設立明確、系統化的五大核心目標，全方位賦能業界與回饋社會：</p>
                 </div>
             </div>
@@ -634,15 +641,15 @@
             <div class="row text-start mb-5">
                 <div class="col-lg-8">
                     <span class="text-gold-gradient fw-bold">SAA Leadership</span>
-                    <h2 class="fw-bold display-5 mt-2 mb-3">理事會架構</h2>
-                    <p class="text-muted">由引領業界高質量發展、富有遠见卓識與社會責任感的資深專業代表領銜組成的核心決策架構：</p>
+                    <h2 class="fw-bold display-5 mt-2 mb-3" style="color: var(--primary-blue);">理事會架構</h2>
+                    <p class="text-muted">由引領業界高質量發展、富有遠見卓識與社會責任感的資深專業代表領銜組成的核心決策架構：</p>
                 </div>
             </div>
 
             <!-- 常務理事群 -->
             <div class="row g-4 text-center justify-content-center">
                 <div class="col-lg-4">
-                    <div class="glass-card p-4 hover-lift bg-body border h-100">
+                    <div class="glass-card p-4 hover-lift bg-body border h-100" style="border-color: var(--border-color) !important;">
                         <div class="council-avatar"><i class="bi bi-award"></i></div>
                         <h4 class="fw-bold mb-1">會長</h4>
                         <p class="text-gold-gradient fw-bold mb-3">常務理事委員會主任</p>
@@ -650,7 +657,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="glass-card p-4 hover-lift bg-body border h-100">
+                    <div class="glass-card p-4 hover-lift bg-body border h-100" style="border-color: var(--border-color) !important;">
                         <div class="council-avatar"><i class="bi bi-people-fill"></i></div>
                         <h4 class="fw-bold mb-1">常務副會長</h4>
                         <p class="text-gold-gradient fw-bold mb-3">學術與持續培訓委員會</p>
@@ -658,7 +665,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="glass-card p-4 hover-lift bg-body border h-100">
+                    <div class="glass-card p-4 hover-lift bg-body border h-100" style="border-color: var(--border-color) !important;">
                         <div class="council-avatar"><i class="bi bi-shield-check"></i></div>
                         <h4 class="fw-bold mb-1">秘書長</h4>
                         <p class="text-gold-gradient fw-bold mb-3">行政、財務與合規管理處</p>
@@ -673,25 +680,25 @@
                     <h4 class="fw-bold text-primary-blue mb-4"><i class="bi bi-grid-3x3-gap me-2 text-warning"></i>理事會下設四大專業分組</h4>
                     <div class="row g-4">
                         <div class="col-md-3">
-                            <div class="p-4 rounded-3 bg-light border">
+                            <div class="p-4 rounded-3 bg-light border" style="border-color: var(--border-color) !important;">
                                 <h6 class="fw-bold text-primary-blue mb-2"><i class="bi bi-laptop text-warning me-2"></i>科技與智慧分組</h6>
                                 <p class="text-muted small mb-0">專門對口 AI、區塊鏈和數字化審計在會計體系落地的培訓和研究。</p>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="p-4 rounded-3 bg-light border">
+                            <div class="p-4 rounded-3 bg-light border" style="border-color: var(--border-color) !important;">
                                 <h6 class="fw-bold text-primary-blue mb-2"><i class="bi bi-globe-asia-australia text-warning me-2"></i>兩地互聯工作組</h6>
                                 <p class="text-muted small mb-0">負責組織深圳、廣州、珠海等多城市與香港專才的實地聯誼和業務交流。</p>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="p-4 rounded-3 bg-light border">
+                            <div class="p-4 rounded-3 bg-light border" style="border-color: var(--border-color) !important;">
                                 <h6 class="fw-bold text-primary-blue mb-2"><i class="bi bi-balloon-heart text-warning me-2"></i>健康與休閒小組</h6>
                                 <p class="text-muted small mb-0">組織會員在職場之外的高爾夫大賽、紅酒評鑒和户外文體健康沙龍。</p>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="p-4 rounded-3 bg-light border">
+                            <div class="p-4 rounded-3 bg-light border" style="border-color: var(--border-color) !important;">
                                 <h6 class="fw-bold text-primary-blue mb-2"><i class="bi bi-mortarboard text-warning me-2"></i>傳承孵化委員會</h6>
                                 <p class="text-muted small mb-0">專注資深與青年專才的引導、專題演講以及各大高校大會計實習生支持方案。</p>
                             </div>
@@ -720,7 +727,7 @@
             <div class="row align-items-end mb-5 text-start">
                 <div class="col-lg-6">
                     <span class="text-gold-gradient fw-bold">SAA Gallery</span>
-                    <h2 class="fw-bold">活動剪影與相冊</h2>
+                    <h2 class="fw-bold" style="color: var(--primary-blue);">活動剪影與相冊</h2>
                     <p class="text-muted mb-0">點擊下方按鈕以過濾並檢視不同類型的精彩照片回顧：</p>
                 </div>
                 <div class="col-lg-6 text-lg-end mt-4 mt-lg-0">
@@ -738,84 +745,84 @@
             <div class="row g-4 text-start animate-on-scroll" id="galleryContainer">
                 <!-- Item 1 -->
                 <div class="col-lg-4 col-md-6 gallery-item training show-item">
-                    <div class="glass-card overflow-hidden hover-lift h-100 bg-body border">
+                    <div class="glass-card overflow-hidden hover-lift h-100 bg-body border" style="border-color: var(--border-color) !important;">
                         <div style="position:relative; height: 220px; background: #ddd;">
                             <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80" alt="[研討會現場照片]" class="w-100 h-100 object-fit-cover">
-                            <span class="badge bg-primary position-absolute" style="top: 15px; left: 15px;">學術研討</span>
+                            <span class="badge bg-primary position-absolute" style="top: 15px; left: 15px; background-color: var(--primary-blue) !important;">學術研討</span>
                         </div>
                         <div class="p-4">
                             <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i> 2026年5月14日</span>
-                            <h5 class="fw-bold my-2">2026年度智能財稅數字化研討會</h5>
+                            <h5 class="fw-bold my-2" style="color: var(--primary-blue);">2026年度智能財稅數字化研討會</h5>
                             <p class="text-muted small mb-0">深度分享大模型與流程自動化技術在複雜財務審計中的全新落地案例。</p>
                         </div>
                     </div>
                 </div>
                 <!-- Item 2 -->
                 <div class="col-lg-4 col-md-6 gallery-item social show-item">
-                    <div class="glass-card overflow-hidden hover-lift h-100 bg-body border">
+                    <div class="glass-card overflow-hidden hover-lift h-100 bg-body border" style="border-color: var(--border-color) !important;">
                         <div style="position:relative; height: 220px; background: #ddd;">
                             <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=600&q=80" alt="[愛好分享會現場照片]" class="w-100 h-100 object-fit-cover">
                             <span class="badge bg-success position-absolute" style="top: 15px; left: 15px;">生活興趣</span>
                         </div>
                         <div class="p-4">
                             <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i> 2026年4月22日</span>
-                            <h5 class="fw-bold my-2">資深會計師職場以外：紅酒評鑒沙龍</h5>
+                            <h5 class="fw-bold my-2" style="color: var(--primary-blue);">資深會計師職場以外：紅酒評鑒沙龍</h5>
                             <p class="text-muted small mb-0">在優雅靜謐的氛圍中交流生活感悟，探討職場之外的健康和睦生活。</p>
                         </div>
                     </div>
                 </div>
                 <!-- Item 3 -->
                 <div class="col-lg-4 col-md-6 gallery-item mainland show-item">
-                    <div class="glass-card overflow-hidden hover-lift h-100 bg-body border">
+                    <div class="glass-card overflow-hidden hover-lift h-100 bg-body border" style="border-color: var(--border-color) !important;">
                         <div style="position:relative; height: 220px; background: #ddd;">
                             <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80" alt="[香港-深圳會計論壇照片]" class="w-100 h-100 object-fit-cover">
                             <span class="badge bg-warning text-dark position-absolute" style="top: 15px; left: 15px;">大灣區互動</span>
                         </div>
                         <div class="p-4">
                             <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i> 2026年3月10日</span>
-                            <h5 class="fw-bold my-2">香港-深圳會計專才互聯互通論壇</h5>
+                            <h5 class="fw-bold my-2" style="color: var(--primary-blue);">香港-深圳會計專才互聯互通論壇</h5>
                             <p class="text-muted small mb-0">加強跨境合規核算與商機共融，多位深圳前海高管親臨香港主會場對接。</p>
                         </div>
                     </div>
                 </div>
                 <!-- Item 4 -->
                 <div class="col-lg-4 col-md-6 gallery-item training show-item">
-                    <div class="glass-card overflow-hidden hover-lift h-100 bg-body border">
+                    <div class="glass-card overflow-hidden hover-lift h-100 bg-body border" style="border-color: var(--border-color) !important;">
                         <div style="position:relative; height: 220px; background: #ddd;">
                             <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80" alt="[上市公司合規培訓照片]" class="w-100 h-100 object-fit-cover">
-                            <span class="badge bg-primary position-absolute" style="top: 15px; left: 15px;">培訓課程</span>
+                            <span class="badge bg-primary position-absolute" style="top: 15px; left: 15px; background-color: var(--primary-blue) !important;">培訓課程</span>
                         </div>
                         <div class="p-4">
                             <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i> 2026年2月18日</span>
-                            <h5 class="fw-bold my-2">最新上市公司披露與ESG審計培訓</h5>
+                            <h5 class="fw-bold my-2" style="color: var(--primary-blue);">最新上市公司披露與ESG審計培訓</h5>
                             <p class="text-muted small mb-0">解讀氣候相關與ESG強制審計指標，幫助資深財務合夥人升級知識防禦線。</p>
                         </div>
                     </div>
                 </div>
                 <!-- Item 5 -->
                 <div class="col-lg-4 col-md-6 gallery-item social show-item">
-                    <div class="glass-card overflow-hidden hover-lift h-100 bg-body border">
+                    <div class="glass-card overflow-hidden hover-lift h-100 bg-body border" style="border-color: var(--border-color) !important;">
                         <div style="position:relative; height: 220px; background: #ddd;">
                             <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=600&q=80" alt="[新春團拜年會現場照片]" class="w-100 h-100 object-fit-cover">
                             <span class="badge bg-success position-absolute" style="top: 15px; left: 15px;">聯誼交流</span>
                         </div>
                         <div class="p-4">
                             <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i> 2026年1月25日</span>
-                            <h5 class="fw-bold my-2">智能會計師協會2026新春晚宴</h5>
+                            <h5 class="fw-bold my-2" style="color: var(--primary-blue);">智能會計師協會2026新春晚宴</h5>
                             <p class="text-muted small mb-0">全體理事、常務委員及眾多尊貴會友歡聚一堂，凝聚開拓共識。</p>
                         </div>
                     </div>
                 </div>
                 <!-- Item 6 -->
                 <div class="col-lg-4 col-md-6 gallery-item mainland show-item">
-                    <div class="glass-card overflow-hidden hover-lift h-100 bg-body border">
+                    <div class="glass-card overflow-hidden hover-lift h-100 bg-body border" style="border-color: var(--border-color) !important;">
                         <div style="position:relative; height: 220px; background: #ddd;">
                             <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="[大灣區代表團考察照片]" class="w-100 h-100 object-fit-cover">
                             <span class="badge bg-warning text-dark position-absolute" style="top: 15px; left: 15px;">特區建言</span>
                         </div>
                         <div class="p-4">
                             <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i> 2025年12月12日</span>
-                            <h5 class="fw-bold my-2">特區政府施政報告會計界徵詢會</h5>
+                            <h5 class="fw-bold my-2" style="color: var(--primary-blue);">特區政府施政報告會計界徵詢會</h5>
                             <p class="text-muted small mb-0">深度匯聚中高端金融及財稅界前沿提案，適時建言獻策，積極履行本會社會職能。</p>
                         </div>
                     </div>
@@ -847,22 +854,22 @@
                     
                     <div class="row g-3">
                         <div class="col-md-12">
-                            <div class="pub-card p-4 hover-lift">
+                            <div class="pub-card p-4 hover-lift" style="border-color: var(--border-color) !important;">
                                 <div class="d-flex align-items-center gap-3">
                                     <div class="fs-1 text-warning"><i class="bi bi-file-earmark-pdf-fill"></i></div>
                                     <div>
-                                        <h5 class="fw-bold mb-1">2025-2026 會長工作總結與建言報告</h5>
+                                        <h5 class="fw-bold mb-1" style="color: var(--primary-blue);">2025-2026 會長工作總結與建言報告</h5>
                                         <p class="text-muted small mb-0">回顧協會近兩年在深化培育、傳承經驗以及大灣區互訪等方面所取得的成果。</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-12 mt-3">
-                            <div class="pub-card p-4 hover-lift">
+                            <div class="pub-card p-4 hover-lift" style="border-color: var(--border-color) !important;">
                                 <div class="d-flex align-items-center gap-3">
-                                    <div class="fs-1 text-primary"><i class="bi bi-journal-text"></i></div>
+                                    <div class="fs-1 text-primary-blue"><i class="bi bi-journal-text"></i></div>
                                     <div>
-                                        <h5 class="fw-bold mb-1">《智能會計師季刊》第 18 期</h5>
+                                        <h5 class="fw-bold mb-1" style="color: var(--primary-blue);">《智能會計師季刊》第 18 期</h5>
                                         <p class="text-muted small mb-0">解讀人工智能技術在複雜項目審計中的合規紅線、隱私保護及風險管理模型。</p>
                                     </div>
                                 </div>
@@ -872,21 +879,21 @@
                 </div>
 
                 <div class="col-lg-6">
-                    <div class="glass-card p-4 border shadow-sm bg-body">
+                    <div class="glass-card p-4 border shadow-sm bg-body" style="border-color: var(--border-color) !important;">
                         <h4 class="fw-bold mb-3 text-primary-blue"><i class="bi bi-mortarboard-fill me-2 text-warning"></i>培訓與論壇活動在線預約</h4>
                         <p class="text-muted small">為了緊貼社會發展趨勢，智能會計師協會提供高質量的持續學習平台，請在下方登記並鎖定席位：</p>
                         
                         <div class="list-group list-group-flush mb-4">
-                            <div class="list-group-item bg-transparent px-0 py-3 d-flex justify-content-between align-items-center">
+                            <div class="list-group-item bg-transparent px-0 py-3 d-flex justify-content-between align-items-center" style="border-color: var(--border-color) !important;">
                                 <div>
-                                    <h6 class="fw-bold mb-1">【研討會】會計界數字化轉型的機遇與挑戰</h6>
+                                    <h6 class="fw-bold mb-1" style="color: var(--primary-blue);">【研討會】會計界數字化轉型的機遇與挑戰</h6>
                                     <small class="text-muted"><i class="bi bi-clock"></i> 2026年6月25日 14:00 - 17:00</small>
                                 </div>
                                 <button class="btn btn-sm btn-outline-gold px-3 rounded-pill" onclick="bookEvent('會計界數字化轉型的機遇與挑戰')">預約</button>
                             </div>
-                            <div class="list-group-item bg-transparent px-0 py-3 d-flex justify-content-between align-items-center">
+                            <div class="list-group-item bg-transparent px-0 py-3 d-flex justify-content-between align-items-center" style="border-color: var(--border-color) !important;">
                                 <div>
-                                    <h6 class="fw-bold mb-1">【培訓班】大灣區跨境稅制及實務運作精講</h6>
+                                    <h6 class="fw-bold mb-1" style="color: var(--primary-blue);">【培訓班】大灣區跨境稅制及實務運作精講</h6>
                                     <small class="text-muted"><i class="bi bi-clock"></i> 2026年7月08日 19:30 - 21:30</small>
                                 </div>
                                 <button class="btn btn-sm btn-outline-gold px-3 rounded-pill" onclick="bookEvent('大灣區跨境稅制及實務運作精講')">預約</button>
@@ -896,7 +903,7 @@
                         <label class="form-label small fw-bold text-primary-blue">訂閱最新會計研究與論壇動態：</label>
                         <div class="input-group">
                             <input type="email" class="form-control" id="newsletterEmail" placeholder="請輸入您的電子郵箱以接收最新活動資訊">
-                            <button class="btn btn-gold" type="button" onclick="subscribeNewsletter()">訂閱</button>
+                            <button class="btn btn-gold" type="button" onclick="subscribeNewsletter()" style="background-color: var(--primary-blue); border-color: var(--primary-blue);">訂閱</button>
                         </div>
                     </div>
                 </div>
@@ -922,7 +929,7 @@
             <div class="row align-items-stretch g-4 text-start">
                 <!-- 左側：入會權益及說明 -->
                 <div class="col-lg-4">
-                    <div class="glass-card p-4 border h-100 bg-light-subtle d-flex flex-column justify-content-between">
+                    <div class="glass-card p-4 border h-100 bg-light-subtle d-flex flex-column justify-content-between" style="border-color: var(--border-color) !important;">
                         <div>
                             <span class="text-gold-gradient fw-bold">SAA Membership Benefits</span>
                             <h3 class="fw-bold mb-3 mt-1 text-primary-blue">加入 SAA 的專屬權益</h3>
@@ -960,7 +967,7 @@
                             </ul>
                         </div>
                         
-                        <div class="p-3 rounded bg-white border mt-4">
+                        <div class="p-3 rounded bg-white border mt-4" style="border-color: var(--border-color) !important;">
                             <span class="text-muted" style="font-size: 0.7rem;"><i class="bi bi-shield-fill-check text-success me-1"></i> 隱私保護聲明：本會極為重視您的隱私，本表單所填報的一切資料均受到香港《個人資料（私隱）條例》嚴格保護。</span>
                         </div>
                     </div>
@@ -968,8 +975,8 @@
 
                 <!-- 右側：Google Forms 對齊的全面表單 -->
                 <div class="col-lg-8">
-                    <div class="form-card">
-                        <div class="text-center border-bottom pb-3 mb-4">
+                    <div class="form-card" style="border-color: var(--border-color) !important;">
+                        <div class="text-center border-bottom pb-3 mb-4" style="border-color: var(--border-color) !important;">
                             <h4 class="fw-bold text-primary-blue mb-1">智能會計師協會 — 入會申請表</h4>
                             <p class="text-muted small">請填寫以下資訊，完成您的 SAA 會籍註冊意向申報。帶有 * 號的欄位為必填項。</p>
                         </div>
@@ -1147,7 +1154,7 @@
 
                             <!-- 提交按鈕 -->
                             <div class="col-12 mt-4 text-center">
-                                <button type="submit" class="btn btn-gold w-100 py-3 rounded-pill fw-bold btn-hover-effect">
+                                <button type="submit" class="btn btn-gold w-100 py-3 rounded-pill fw-bold btn-hover-effect" style="background-color: var(--primary-blue); border-color: var(--primary-blue);">
                                     <i class="bi bi-file-earmark-check-fill me-1"></i> 遞交會籍申請意向書
                                 </button>
                             </div>
@@ -1164,7 +1171,7 @@
     <!-- ======================================================= -->
     <div class="modal fade" id="receiptModal" tabindex="-1" aria-labelledby="receiptModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content" style="border-radius: 20px; overflow: hidden; border: 2px solid var(--accent-gold);">
+            <div class="modal-content" style="border-radius: 20px; overflow: hidden; border: 2px solid var(--primary-blue);">
                 <div class="modal-header text-white" style="background-color: var(--primary-blue);">
                     <h5 class="modal-title fw-bold" id="receiptModalLabel">
                         <i class="bi bi-patch-check-fill text-warning me-2"></i> 會籍申請已成功遞交
@@ -1219,7 +1226,7 @@
                     </div>
                 </div>
                 <div class="modal-footer bg-light border-0 pt-0">
-                    <button type="button" class="btn btn-gold w-100 rounded-pill" data-bs-dismiss="modal">
+                    <button type="button" class="btn btn-gold w-100 rounded-pill" data-bs-dismiss="modal" style="background-color: var(--primary-blue); border-color: var(--primary-blue);">
                         <i class="bi bi-check2-circle me-1"></i> 確認並返回
                     </button>
                 </div>
